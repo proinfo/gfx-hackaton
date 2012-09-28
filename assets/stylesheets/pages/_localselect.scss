@@ -1,0 +1,46 @@
+.mw_localselect#introLocale{
+
+	#background{
+		height: 928px;
+		background-size: auto 1024px;
+	}
+
+	#content {
+		background-size: 830px auto;
+		width: 768px;
+		background-position: center top;
+		margin-left: -385px;
+		margin-top: -350px;
+		
+		#content-inner {
+			width: 680px;
+			margin: 50px 10px 0px 45px;
+		}
+		#shopList li {
+			float: none;
+			display: inline-block;
+			margin: 0 0 0 20px;
+		}
+		.row{
+			width: 655px;		
+			#regionList > li {
+				margin: 0px 0px 0px 38px;
+				&:first-child{
+					margin-left: 0;
+				}
+				li{
+					margin: 5px 0 0px 0;						
+				}
+			}
+		}
+		.gutter-05 {
+			padding-bottom: 17px;
+		}
+	}
+	
+	.col-18, .col-20 {
+		margin-left: 0px;
+		margin-right: 0px;
+		width: 100%;
+	}
+}

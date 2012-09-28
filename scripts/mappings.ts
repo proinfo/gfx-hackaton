@@ -22,6 +22,15 @@ match($status) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }
+
+			with(/LocaleSelectionForm/) {
+				@import pages/localselect.ts
+			}
+			
+			with(/shop-mens/) {
+				@import pages/shopmens.ts
+			}
+			
       else() {
         log("--> No page match in mappings.ts")
       }

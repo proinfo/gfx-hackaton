@@ -1,3 +1,133 @@
 body{
-	background-color: red;
+	#toolbar{
+		display: none;
+	}
+	
+	#nav{
+		height: 87px;
+		position: relative;
+		#nav-inner{
+			> a{
+				margin-left: 25px;
+				position: absolute;
+			}
+			.paypal {
+				position: absolute;
+				top: 17px;
+				right: 25px;
+			}
+			.mw_header-box{
+				position: absolute;
+				top: 42px;
+				right: 31px;
+				#WC_LogonLogoffLink{
+					@include sprites-user();
+					@include sheba-button();
+				}
+				.mw_checkout a{
+					@include sprites-checkout();
+					@include sheba-button();
+				}
+				.mw_cart a{
+					@include sprites-cart();
+					@include sheba-button();
+				}
+				> *{
+					display: inline-block;
+					float: left;
+					margin-right: 1px;
+				}
+			}	
+			
+			.mw_navicons{
+				position: absolute;
+				left: 50%;
+				top: 22px;
+				margin-left: -50px;
+				.mw_menu-icon{
+					@include sprites-menu-off();
+					@include sheba-button();
+					border-right: 1px solid #848484;
+					&[data-ur-state="enabled"]{
+						@include sprites-menu-on();
+					}
+				}
+				.mw_search-icon{
+					@include sprites-search-off();
+					@include sheba-button();
+					&[data-ur-state="enabled"]{
+						@include sprites-search-on();
+					}
+				}
+			} // nav-iner
+			
+		
+			
+		} // nav
+		.mw_nav-menu-wrapper{
+			background: image-url("trans90.png") repeat 0 0;
+			padding-bottom: 15px;
+			.mw_nav-menu{
+				padding: 15px 0;
+				height: 2325px;
+				width: 742px;
+				margin: auto;
+				border: 1px solid #4c4c4c;
+				border-top: 0px none #000;
+				position: relative;
+				top: 1px;
+				
+				@include background-image(linear-gradient(#e8e8e8, #d8d8d8));
+				
+				-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+				-webkit-border-radius: 0px 0px 10px 10px;
+				   -moz-border-radius: 0px 0px 10px 10px;
+				        border-radius: 0px 0px 10px 10px;
+				
+				@include box-shadow(#000 0px 1px 4px);	
+				.mw_main-menu{
+					margin: 0px auto;
+					li{
+						&.pipe{
+							display: none;
+						}
+						a{
+							display: block;
+							text-indent: -9999px;
+							margin: auto;
+							width: 735px;
+							height: 287px;
+							margin-bottom: 5px;
+							&[data-dropdown="mens"]{
+								background: image-url("nav-mens.jpg") no-repeat 0 0;
+							}
+							&[data-dropdown="womens"]{
+								background: image-url("nav-womens.jpg") no-repeat 0 0;
+							}
+							&[data-dropdown="kids"]{
+								background: image-url("nav-kids.jpg") no-repeat 0 0;
+							}
+							&[data-dropdown="equipment"]{
+								background: image-url("nav-equipment.jpg") no-repeat 0 0;
+							}
+							&[data-dropdown="shopby"]{
+								background: image-url("nav-shopby.jpg") no-repeat 0 0;
+							}
+							&[data-dropdown="exploration"]{
+								background: image-url("nav-exploration.jpg") no-repeat 0 0;
+							}
+							&[data-dropdown="innovation"]{
+								background: image-url("nav-innovation.jpg") no-repeat 0 0;
+							}
+							&[data-dropdown="getoutdoors"]{
+								background: image-url("nav-getoutdoors.jpg") no-repeat 0 0;
+							}
+						}
+					}
+				}	
+			}
+		}
+			
+	}
+	
 }
