@@ -1,7 +1,7 @@
 $sprites-url: url("http://localhost:3003/images/sprites.png");
 
 $sprites-width: 52px;
-$sprites-height: 287px;
+$sprites-height: 327px;
 
 $sprites-cart-x: 0px;
 $sprites-cart-y: 0px;
@@ -23,18 +23,23 @@ $sprites-menu-on-y: -113px;
 $sprites-menu-on-width: 52px;
 $sprites-menu-on-height: 47px;
 
+$sprites-nav-back-x: 0px;
+$sprites-nav-back-y: -160px;
+$sprites-nav-back-width: 40px;
+$sprites-nav-back-height: 40px;
+
 $sprites-search-off-x: 0px;
-$sprites-search-off-y: -160px;
+$sprites-search-off-y: -200px;
 $sprites-search-off-width: 51px;
 $sprites-search-off-height: 47px;
 
 $sprites-search-on-x: 0px;
-$sprites-search-on-y: -207px;
+$sprites-search-on-y: -247px;
 $sprites-search-on-width: 51px;
 $sprites-search-on-height: 47px;
 
 $sprites-user-x: 0px;
-$sprites-user-y: -254px;
+$sprites-user-y: -294px;
 $sprites-user-width: 44px;
 $sprites-user-height: 33px;
 
@@ -62,20 +67,26 @@ $sprites-user-height: 33px;
   height: 47px;
 }
 
-@mixin sprites-search-off() {
+@mixin sprites-nav-back() {
   background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -160px;
+  width: 40px;
+  height: 40px;
+}
+
+@mixin sprites-search-off() {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -200px;
   width: 51px;
   height: 47px;
 }
 
 @mixin sprites-search-on() {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -207px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -247px;
   width: 51px;
   height: 47px;
 }
 
 @mixin sprites-user() {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -254px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -294px;
   width: 44px;
   height: 33px;
 }
@@ -104,20 +115,26 @@ $sprites-user-height: 33px;
   height: 47px;
 }
 
-.sprites-search-off {
+.sprites-nav-back {
   background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -160px;
+  width: 40px;
+  height: 40px;
+}
+
+.sprites-search-off {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -200px;
   width: 51px;
   height: 47px;
 }
 
 .sprites-search-on {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -207px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -247px;
   width: 51px;
   height: 47px;
 }
 
 .sprites-user {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -254px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -294px;
   width: 44px;
   height: 33px;
 }

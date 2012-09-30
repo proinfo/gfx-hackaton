@@ -66,10 +66,10 @@ body{
 		} // nav
 		.mw_nav-menu-wrapper{
 			background: image-url("trans90.png") repeat 0 0;
-			padding-bottom: 15px;
+			min-height: 1500px;
 			.mw_nav-menu{
-				padding: 15px 0;
-				height: 2325px;
+				padding: 25px 0 15px;				
+				height: 725;
 				width: 742px;
 				margin: auto;
 				border: 1px solid #4c4c4c;
@@ -77,7 +77,7 @@ body{
 				position: relative;
 				top: 1px;
 				
-				@include background-image(linear-gradient(#e8e8e8, #d8d8d8));
+				background-color: #d8d8d8;
 				
 				-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
 				-webkit-border-radius: 0px 0px 10px 10px;
@@ -85,46 +85,215 @@ body{
 				        border-radius: 0px 0px 10px 10px;
 				
 				@include box-shadow(#000 0px 1px 4px);	
-				.mw_main-menu{
-					margin: 0px auto;
-					li{
-						&.pipe{
-							display: none;
-						}
-						a{
-							display: block;
-							text-indent: -9999px;
-							margin: auto;
-							width: 735px;
-							height: 287px;
-							margin-bottom: 5px;
-							&[data-dropdown="mens"]{
-								background: image-url("nav-mens.jpg") no-repeat 0 0;
-							}
-							&[data-dropdown="womens"]{
-								background: image-url("nav-womens.jpg") no-repeat 0 0;
-							}
-							&[data-dropdown="kids"]{
-								background: image-url("nav-kids.jpg") no-repeat 0 0;
-							}
-							&[data-dropdown="equipment"]{
-								background: image-url("nav-equipment.jpg") no-repeat 0 0;
-							}
-							&[data-dropdown="shopby"]{
-								background: image-url("nav-shopby.jpg") no-repeat 0 0;
-							}
-							&[data-dropdown="exploration"]{
-								background: image-url("nav-exploration.jpg") no-repeat 0 0;
-							}
-							&[data-dropdown="innovation"]{
-								background: image-url("nav-innovation.jpg") no-repeat 0 0;
-							}
-							&[data-dropdown="getoutdoors"]{
-								background: image-url("nav-getoutdoors.jpg") no-repeat 0 0;
-							}
+				
+				
+				#container{
+					height: auto;
+					width: 100%;
+					position: relative;
+					text-align: center;
+
+					-webkit-perspective: 4200;
+				}
+				.db{
+					height: 169px;
+					width: 356px;
+					display: inline-block;
+					margin: 0 2px 10px;
+
+					-webkit-transform-style: preserve-3d;
+				}
+				h3{
+					font-size: 18px;
+					margin-bottom: 15px;
+					line-height: 1em;
+				}
+				p{
+					margin-bottom: 10px;
+				}
+				.simple h3, .simple p{
+					padding: 20px;
+				}
+				.block {
+					position: absolute;
+					height: 169px;
+					width: 356px;
+					left: 0px;
+					top: 0px;
+
+					
+					-webkit-transform-style: preserve-3d;
+					-webkit-transition: -webkit-transform 1.5s;
+					
+					> div{
+						background-size: 100% !important;
+					}
+					&#nav-mens{
+						.front.side{
+							background: image-url("nav-mens.jpg") no-repeat 0 0;
 						}
 					}
-				}	
+					&#nav-womens{
+						.front.side{
+							background: image-url("nav-womens.jpg") no-repeat 0 0;
+						}
+					}
+					&#nav-kids{
+						.front.side{
+							background: image-url("nav-kids.jpg") no-repeat 0 0;
+						}
+					}				
+					&#nav-equipment{
+						.front.side{
+							background: image-url("nav-equipment.jpg") no-repeat 0 0;
+						}
+					}
+					&#nav-shopby{
+						.front.side{
+							background: image-url("nav-shopby.jpg") no-repeat 0 0;
+						}
+					}
+					&#nav-exploration{
+						.front.side{
+							background: image-url("nav-exploration.jpg") no-repeat 0 0;
+						}
+					}
+					&#nav-innovation{
+						.front.side{
+							background: image-url("nav-innovation.jpg") no-repeat 0 0;
+						}
+					}
+					&#nav-getoutdoors{
+						.front.side{
+							background: image-url("nav-getoutdoors.jpg") no-repeat 0 0;
+						}
+					}
+				}
+
+				.rotated,
+				.mover .block:hover{
+					-webkit-transform: rotateY(180deg);
+				}
+
+				.block .front{
+					z-index: 50;
+				}
+				.block .back{
+					z-index: 10;
+					background: image-url("nav-off.jpg") no-repeat 0 0;
+				}
+				.rotated .back, .mover .block:hover .back{
+					z-index: 99;
+				}
+
+				.side{
+					position: absolute;	
+					background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+
+					-webkit-backface-visibility: hidden;
+					-webkit-box-shadow: 0 2px 5px #ccc;
+				}
+
+				.front{
+					color: #fff;
+					background-color: #000;
+					height: 169px;
+					width: 356px;
+
+
+				}
+				.front img{ }
+
+				.back{
+					background-color: #fff;
+					height: 169px;
+					width: 356px;
+
+					-webkit-transform: rotateY(180deg);
+				}
+
+				.wrapper{
+					position:relative;
+					-webkit-backface-visibility: hidden;
+					
+					.mw_col1, .mw_col2, .mw_col3{
+						width: 33%;
+						float: left;
+						text-align: left;
+					}
+					.mw_col1{
+						display: none;
+						.mw_title{
+							font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
+							font-weight: bold;
+							font-stretch: condensed;
+							line-height: 19px;
+							margin: 17px 20px;
+							display: block;
+							text-align: left;
+							.white{
+								color: #fff;
+								font-size: 14px;
+								display: block;
+							}
+							.dark{
+								color: #0d0d0d;
+								display: block;
+								font-size: 26px;
+							}
+						}
+						.mw_tile-button{
+							background-color: #4f4f4f;
+							display: block;
+							padding: 9px 10px;
+							width: 94px;
+							text-align: left;
+							color: #fff;
+							text-transform: uppercase;
+							font-size: 10px;
+							margin: 2px 0px 0px 20px;
+						}
+					}
+					.mw_col2, .mw_col3{
+						padding-top: 20px;
+						padding-left: 10px;
+						a{
+							display: block;
+							font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
+							font-weight: bold;
+							font-stretch: condensed;
+							font-size: 16px;
+							text-shadow: 0px 0px 1px #484848;
+							color: #fff;
+							line-height: 160%;
+							margin-left: 15px;
+						}						
+					}
+					.mw_col2{
+						width: 50%;
+					}
+					.mw_col3{
+						a{
+							margin-left: 25px;
+						}
+					}
+					
+				}
+				.goback{
+					position: absolute;
+					top: 110px;
+					right: 25px;
+					text-indent: -9999px;
+					@include sprites-nav-back();
+				}
+				.goback:hover{
+					cursor: pointer;
+				}
+				.back .content{
+					padding: 50px 25px;
+				}
+				
+				
 			}
 		}
 			
