@@ -4,15 +4,29 @@
 
 @import "bourbon/_bourbon";
 
+input{
+	-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+	-webkit-border-radius: 0px;
+	   -moz-border-radius: 0px;
+	        border-radius: 0px;
+}
+#content{
+	background-size: 800px;
+	background-position: center 10px;
+}
+.stamp-tr {
+	top: 0;
+	right: -2px;
+}
 #nav #nav-inner {
 	width: 100%;
 }
 .row {
-	width: 100%;
+	width: 720px;
 }
-.col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
-	width: 100%;
-}
+//.col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
+//	width: 100%;
+//}
 
 #content #content-inner {
 	width: 100%;

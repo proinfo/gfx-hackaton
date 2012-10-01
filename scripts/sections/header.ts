@@ -1,6 +1,9 @@
 $('./body') {
 	$("./div[@id='nav']") {
-		attribute("data-ur-set", "toggler")
+		# attribute("data-ur-set", "toggler")
+		attribute("data-ur-set", "tabs")
+		attribute("data-ur-closeable", "true")
+		
 		$("./div[@id='nav-inner']") {
 			
 			insert_bottom("div", class: "mw_header-box"){
@@ -20,20 +23,20 @@ $('./body') {
 			/*** Menu & Search switch ***/
 			insert_top("div", class: "mw_navicons"){
 				insert("a", class: "mw_menu-icon"){
-					attribute("data-ur-toggler-component", "button")
-					attribute("data-ur-id", "mw_menu")
+					attribute("data-ur-tabs-component", "button")
+					attribute("data-ur-tab-id", "mw_menu")
 				}
 				insert("a", class: "mw_search-icon"){
- 					attribute("data-ur-toggler-component", "button")
-					attribute("data-ur-id", "mw_search")
+					attribute("data-ur-tabs-component", "button")
+					attribute("data-ur-tab-id", "mw_search")
 				}
 			}
 						
 		}
 		insert_bottom("div", class: "mw_nav-menu"){
 			wrap("div", class: "mw_nav-menu-wrapper"){
-				attribute("data-ur-toggler-component", "content")
-				attribute("data-ur-id", "mw_menu")
+				attribute("data-ur-tabs-component", "content")
+				attribute("data-ur-tab-id", "mw_menu")
 			}
 				
 			move_here("../../div[@id='nav-inner']/ul", "top"){
@@ -81,6 +84,7 @@ $('./body') {
 									}
 									insert("div", class: "mw_col2"){
 										insert("a"){
+											attribute("href", "http://mlocal.thenorthface.com/catalog/sc-gear/men-s-jackets-vests.html")
 											inner("JACKETS & VESTS")
 										}
 										insert("a"){
@@ -256,9 +260,11 @@ $('./body') {
 			}
 		}
 		insert_bottom("div", class: "mw_search"){
-			attribute("data-ur-id", "mw_search")
-			attribute("data-ur-toggler-component", "content")
-			move_here("../div[@id='nav-inner']/div[@class='search-box']", "top")
+			wrap("div", class: "mw_nav-menu-wrapper"){
+				attribute("data-ur-tab-id", "mw_search")
+				attribute("data-ur-tabs-component", "content")
+			}
+			move_here("../../div[@id='nav-inner']/div[@class='search-box']", "top")
 		}
 	}
 }

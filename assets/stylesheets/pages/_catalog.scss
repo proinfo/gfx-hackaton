@@ -1,0 +1,35 @@
+.mw_catalog{
+	.content-box{
+		.col-06{
+			width: 100%;
+			.parametricNav{
+				width: 960px;
+				.mw_sidecol-1{
+					width: 33%;
+					.col-06{
+						width: 95%;
+					}
+				}
+				.mw_sidecol-2{
+					width: 66%;
+					.col-06{
+						> div{
+							float: left;
+							width: 45%;
+						}
+					}
+				}
+			}			
+		}
+		.col-18{
+			width: 100%;
+			.gutter-01{
+				width: auto;
+				#results{
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}	
+}

@@ -30,6 +30,9 @@ match($status) {
 			with(/shop-mens/) {
 				@import pages/shopmens.ts
 			}
+			with(/catalog/) {
+				@import pages/catalog.ts
+			}
 			
       else() {
         log("--> No page match in mappings.ts")

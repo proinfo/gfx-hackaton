@@ -1,3 +1,24 @@
 .mw_shopmens{
-	
+	.hero{
+		img{
+			max-width: 100% !important;
+			height: auto;
+		}
+		.cta {
+			bottom: 7px;
+			right: 0;
+		}
+	}
+	#midas_snippet_16{
+		.col-08 {
+			width: 236px;
+			a.box{
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		
+	}
 }
