@@ -1,35 +1,75 @@
 .mw_catalog{
-	.content-box{
-		.col-06{
-			width: 100%;
-			.parametricNav{
-				width: 960px;
-				.mw_sidecol-1{
-					width: 33%;
-					.col-06{
-						width: 95%;
-					}
-				}
-				.mw_sidecol-2{
-					width: 66%;
-					.col-06{
-						> div{
-							float: left;
-							width: 45%;
+	#content{
+		.content-box{
+
+			/*** Filters ***/
+			.col-06{
+				width: 100%;
+				.parametricNav{
+					width: 960px;
+					/* Mens */
+					.mw_sidecol-1{
+						width: 33%;
+						.col-06{
+							width: 95%;
+							.tertiary{
+								-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+								-webkit-border-radius: 10px;
+								   -moz-border-radius: 10px;
+								        border-radius: 10px;
+
+							}
 						}
 					}
-				}
-			}			
-		}
-		.col-18{
-			width: 100%;
-			.gutter-01{
-				width: auto;
-				#results{
-					display: block;
-					width: 100%;
+
+					/*** Filters ***/
+					.mw_sidecol-2{
+						width: 66%;
+						.col-06{
+							> div{
+								float: right;
+								width: 49%;
+								margin-left: 2px;
+							}
+							.mw_filters{
+								> .filterBar{
+									display: block !important;
+								}
+								h2.title.alt {								
+									margin: 16px 0 15px 0;
+								}
+								> h2.title.alt{
+									margin: 0;
+								}
+							}
+							.filters{
+								padding-bottom: 0;
+								> div{
+									display: none;
+								}
+							}
+						}
+					}
+				}			
+			}
+
+			/*** Products ***/
+			.col-18{
+				width: 100%;
+				.gutter-01{
+					width: auto;
+					#results{
+						display: block;
+						width: 100%;
+					}
 				}
 			}
-		}
-	}	
+		}	
+		
+	}
+	.content-box.tertiary{
+		background-color: #fff;
+		height: 290px;
+		padding-bottom: 0px !important;
+	}
 }

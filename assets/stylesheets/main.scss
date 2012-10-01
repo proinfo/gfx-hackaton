@@ -8,11 +8,6 @@
 @import "globals/_lib";
 @import "globals/_uranium";
 
-@media all and (min-width: 960px) {
-	@import "globals/_tabland.scss";
-}
-
-
 // Header & Footer
 @import "sections/_header";
 @import "sections/_footer";
@@ -22,3 +17,8 @@
 @import "pages/_localselect";
 @import "pages/_shopmens";
 @import "pages/_catalog";
+
+
+@media all and (min-width: 960px) {
+	@import "globals/_tabland.scss";
+}

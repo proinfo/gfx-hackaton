@@ -13,27 +13,44 @@ $("./body") {
 								}
 								$("./div[@class='gutter-01 mw_sidecol-2']") {
 									$("./div[@class='col-06']") {
+										attribute("data-ur-set", "tabs")
 										
-										$("./div[@class='tertiary content-box filters tr br']") {
-											$("./div[contains(@class, 'filterBar')]") {
-												add_class("mw_filterno-" + index())
-											}
-											$("./ul[contains(@class, 'filterCategories')]") {
-												add_class("mw_filterno-" + index())
-											}
-											
-											$("./ul[contains(@class, 'filterCategories')]") {
-												move_to("../../div[@class='mw_filters']", "top")
-											}
-											
-										}										
 										/* Filter items */
-										insert_bottom("div", class: "mw_filterno"){
+										insert_bottom("div", class: "mw_filters tertiary content-box"){
 											insert_top("h2", class: "title alt reverse"){
 												inner("Filters")
 											}
 										
 										}
+										
+										
+										$("./div[@class='tertiary content-box filters tr br']") {
+											
+											$("./div[contains(@class, 'filterBar')][1]") {
+												attribute("data-ur-state", "enabled")
+											}
+											
+											$("./div[contains(@class, 'filterBar')]") {
+												add_class("mw_filterno-" + index())
+												attribute("data-ur-tabs-component", "button")
+												attribute("data-ur-tab-id", "mw_tabno" + index())
+												copy_to("../../div[@class='mw_filters tertiary content-box']", "bottom")
+											}
+											
+											$("./ul[contains(@class, 'filterCategories')]") {
+												add_class("mw_filterno-" + index())																																			
+												attribute("name", "value")
+												
+												attribute("data-ur-tabs-component", "content")
+												attribute("data-ur-tab-id", "mw_tabno" + index())												
+											}																										
+											
+											$("./ul[contains(@class, 'filterCategories')][1]") {
+												attribute("data-ur-state", "enabled")
+											}	
+																																																
+										}																														
+										
 									}
 								}
 							}

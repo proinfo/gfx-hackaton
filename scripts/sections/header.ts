@@ -1,6 +1,5 @@
 $('./body') {
 	$("./div[@id='nav']") {
-		# attribute("data-ur-set", "toggler")
 		attribute("data-ur-set", "tabs")
 		attribute("data-ur-closeable", "true")
 		
