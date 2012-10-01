@@ -8,7 +8,10 @@
 @import "globals/_lib";
 @import "globals/_uranium";
 
-// insert("link", rel: "stylesheet", type: "text/css", media:"all and (min-width: 960px)", href: asset("stylesheets/tabland.css"))   
+@media all and (min-width: 960px) {
+	@import "globals/_tabland.scss";
+}
+
 
 // Header & Footer
 @import "sections/_header";
