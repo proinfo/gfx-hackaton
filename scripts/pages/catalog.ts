@@ -23,12 +23,12 @@ $("./body") {
 											}
 											
 											$("./ul[contains(@class, 'filterCategories')]") {
-												
+												move_to("../../div[@class='mw_filters']", "top")
 											}
 											
 										}										
 										/* Filter items */
-										insert_bottom("div", class: "mw_filters"){
+										insert_bottom("div", class: "mw_filterno"){
 											insert_top("h2", class: "title alt reverse"){
 												inner("Filters")
 											}

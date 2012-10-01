@@ -1,0 +1,110 @@
+/*** Base ***/
+.row {
+	width: 960px;
+}
+#content{
+	background-size: auto;
+}
+.stamp-tr {
+	top: 0;
+	right: 0;
+}
+#content{
+	background-position: center 0px;
+}
+
+
+/*** Landing page ***/
+.mw_localselect#introLocale #content{
+	margin-top: -310px;
+	background-size: auto auto;
+	width: 956px;
+	height: 510px;
+	margin-left: -478px;
+	margin-top: -310px;
+}
+.mw_localselect#introLocale #background{
+	height: 673px;
+}
+.mw_localselect#introLocale #content #content-inner {
+	width: 796px;
+	margin: 50px 80px 0px 80px;
+}
+
+.mw_localselect#introLocale #content .row {
+	width: 800px;
+}
+.mw_localselect#introLocale #content .row .col-18 {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.mw_localselect#introLocale #content #shopList li:first-child{
+	margin-left: 0px;
+}
+.mw_localselect#introLocale #content .row #regionList > li {
+	margin: 0px 0px 0px 45px;
+}
+
+/*** Navigation menu ***/
+body #nav .mw_nav-menu-wrapper .mw_nav-menu{
+	width: 986px;
+	height: 950px;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .db{
+	height: 222px;
+	width: 466px;
+	margin: 0 2px 10px;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .block{
+	height: 222px;
+	width: 466px;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .front{
+	height: 222px;
+	width: 466px;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .back{
+	height: 222px;
+	width: 466px;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col1{
+	display: inline-block;
+	float: left;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .goback {
+	top: 160px;
+	right: 25px;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 {
+	width: 33%;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2, body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col3 {
+	padding-top: 40px;
+	padding-left: 0px;
+}
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col3 a{
+	line-height: 200%;
+}
+
+/*** Shop men ***/
+.mw_shopmens #midas_snippet_16 .col-08 {
+	width: 316px;
+}
+.mw_shopmens .box .cta {
+	bottom: 7px;
+	right: 4px;
+}
+
+/*** Footer ***/
+#footer hr{
+	width: 960px;
+}
+#footer .mw_footer1 .mw_row12, 
+#footer .mw_footer1 .mw_row13 {
+	margin-top: 20px;
+	margin-left: 60px;
+	margin-right: -60px;
+}
+#footer .mw_footer2 #utility .col-03 {
+width: 185px;
+}
