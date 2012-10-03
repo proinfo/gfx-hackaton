@@ -3,7 +3,8 @@
 	width: 960px;
 }
 #content{
-	background-size: auto;
+	background-size: auto !important;
+	background-position: center 0px !important;
 }
 .stamp-tr {
 	top: 0;
@@ -101,7 +102,7 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_n
 		width: 956px;
 	}
 	#content .content-box .col-18 {
-		width: 100%;
+		width: 956px;
 	}
 	#content .content-box .col-06 .parametricNav {
 		width: 960px;

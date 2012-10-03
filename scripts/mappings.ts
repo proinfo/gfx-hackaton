@@ -32,10 +32,14 @@ match($status) {
 			}
 			with(/mens-apex-bionic-jacket/) {
 				@import pages/product.ts
+			}			
+			with(/webapp/) {
+				@import pages/cart.ts
 			}
 			with(/catalog/) {
 				@import pages/catalog.ts
 			}
+			
 			
       else() {
         log("--> No page match in mappings.ts")

@@ -13,8 +13,8 @@
 		margin-top: -350px;
 		
 		#content-inner {
-			width: 680px;
-			margin: 50px 10px 0px 45px;
+			width: 668px;
+			margin: 50px 10px 0px 49px;
 		}
 		#shopList li {
 			float: none;
@@ -36,8 +36,17 @@
 		.gutter-05 {
 			padding-bottom: 17px;
 		}
+		.arrow-box .arrow {
+			background: #EE3124 image-url("arrows.gif") no-repeat 0px -88px;
+		}
+		.content-box.introLocale{
+			-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+			-webkit-border-radius: 10px 10px 0 0;
+			   -moz-border-radius: 10px 10px 0 0;
+			        border-radius: 10px 10px 0 0;
+			
+		}
 	}
-	
 	.col-18, .col-20 {
 		margin-left: 0px;
 		margin-right: 0px;

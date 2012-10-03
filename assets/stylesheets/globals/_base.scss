@@ -11,8 +11,12 @@ input{
 	        border-radius: 0px;
 }
 #content{
-	background-size: 800px;
-	background-position: center 10px;
+	background-size: 800px !important;
+	background-position: center 10px !important;
+	background: image-url("content-box.png") no-repeat top center;
+}
+#background {
+	background: image-url("spring-2011-bg.jpeg") no-repeat top center;
 }
 .stamp-tr {
 	top: 0;
@@ -24,9 +28,9 @@ input{
 .row {
 	width: 720px;
 }
-//.col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
-//	width: 100%;
-//}
+#nav {
+	background: image-url("global-tiles-x.png") repeat-x 0 -27px;
+}
 
 #content #content-inner {
 	width: 100%;
@@ -34,4 +38,8 @@ input{
 
 .mw_display_none{
 	display: none !important;
+}
+
+.col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
+	width: 100%;
 }
