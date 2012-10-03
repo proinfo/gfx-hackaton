@@ -5,6 +5,7 @@ $("./body") {
 		$("./div[@id='content-inner']") {
 			$("./div[@class='content-box']") {
 				$("./div[@class='row']") {
+					
 					$("./div[@class='col-06']") {
 						$("./div[@class='row']") {
 							$("./div[@class='parametricNav']") {
@@ -18,7 +19,7 @@ $("./body") {
 										/* Filter items */
 										insert_bottom("div", class: "mw_filters tertiary content-box"){
 											insert_top("h2", class: "title alt reverse"){
-												inner("Filters")
+												inner("Narrow Items By")
 											}
 										
 										}
@@ -56,9 +57,19 @@ $("./body") {
 							}
 						}
 					}
+					
+					$("./div[@class='col-18']") {
+						$("./div[@id='grid']") {
+							$("./div[@id='results']") {
+								$(".//a[contains(@href, 'http://www.thenorthface.com')]") {
+								}
+							}
+						}
+					}
+					
 				}
 			}
 		}
 	}
-	
+		
 }

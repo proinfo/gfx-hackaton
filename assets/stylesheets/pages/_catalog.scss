@@ -1,27 +1,46 @@
 .mw_catalog{
+	.col-24 {
+		width: 715px;
+	}
+	
+	
 	#content{
 		.content-box{
 
 			/*** Filters ***/
+			> .row > .col-06{
+				background: image-url("separator.png") no-repeat bottom center;
+				padding-bottom: 16px;
+				margin-bottom: 13px;
+				display: block;
+				background-size: 98%;
+			}
 			.col-06{
 				width: 100%;
 				.parametricNav{
-					width: 960px;
+					width: 725px;
 					/* Mens */
 					.mw_sidecol-1{
 						width: 33%;
 						.col-06{
-							width: 95%;
+							width: 98%;
 							.tertiary{
 								-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
-								-webkit-border-radius: 10px;
-								   -moz-border-radius: 10px;
-								        border-radius: 10px;
+								-webkit-border-radius: 10px 10px 0 0;
+								   -moz-border-radius: 10px 10px 0 0;
+								        border-radius: 10px 10px 0 0;
 
+							}
+							ul li a{
+								font-size: 13px;
 							}
 						}
 					}
-
+						.content-box.tertiary{
+							background-color: #fff;
+							height: 290px;
+							padding-bottom: 0px !important;
+						}
 					/*** Filters ***/
 					.mw_sidecol-2{
 						width: 66%;
@@ -30,20 +49,66 @@
 								float: right;
 								width: 49%;
 								margin-left: 2px;
-							}
+							}						
+							/*** Left ***/
 							.mw_filters{
+								
+								-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+								-webkit-border-radius: 10px 0 0 0px;
+								   -moz-border-radius: 10px 0 0 0px;
+								        border-radius: 10px 0 0 0px;
+								
+								
 								> .filterBar{
 									display: block !important;
-								}
+								}	
 								h2.title.alt {								
-									margin: 16px 0 15px 0;
-								}
+									margin: 19px 0px 0px 0px;
+								}							
 								> h2.title.alt{
-									margin: 0;
+									margin: -10px 0px 0 0;
+									-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+									-webkit-border-radius: 10px 0 0 0;
+									   -moz-border-radius: 10px 0 0 0;
+									        border-radius: 10px 0 0 0;									
+								}
+								.filterBar[data-ur-state='enabled']{									
+									h2.title.alt, a, span{
+										color: #e7122e !important;										
+									}									
 								}
 							}
+							
+							/*** Right ***/
 							.filters{
+								-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+								-webkit-border-radius: 0 10px 0px 0;
+								   -moz-border-radius: 0 10px 0px 0;
+								        border-radius: 0 10px 0px 0;																								
 								padding-bottom: 0;
+								
+								> h2.title.alt{
+									-webkit-background-clip: padding-box; /* fix WebKit background bleed on border-radius */
+									-webkit-border-radius: 0 10px 0 0;
+									   -moz-border-radius: 0 10px 0 0;
+									        border-radius: 0 10px 0 0;
+									text-indent: -9999px;	
+									margin-bottom: 20px;								
+								}
+								.loading{
+									margin-left: 24px;
+									margin-top: -2px;									
+								}
+								> ul{
+									padding: 5px 5px 5px 20px;
+								}
+								label{
+									font-size: 12px;
+									vertical-align: middle;
+								}
+								input{
+									vertical-align: middle;
+								}
 								> div{
 									display: none;
 								}
@@ -54,22 +119,51 @@
 			}
 
 			/*** Products ***/
-			.col-18{
-				width: 100%;
-				.gutter-01{
-					width: auto;
+			.col-18{				
+				> .row{
+					> .gutter-01{
+						width: 100%;	
+						.pagination{
+							.controls{
+								ul{
+									li{
+										a{
+											padding: 2px 11px;
+											margin: 0 3px;
+										}
+									}
+								}
+							}
+						}		
+					}
 					#results{
 						display: block;
 						width: 100%;
+						.productBlock{
+							.productName{
+								height: 35px;
+							}
+							.colorSwatches{
+								height: 81px;
+								.swatch{
+									width: 25px;
+									height: 25px;
+									> span{
+										width: 22px;
+										height: 22px;
+										> span{
+											width: 50%;
+											height: 22px;
+										}
+									}
+								}								
+							}
+						}
 					}
-				}
+				}				
 			}
 		}	
 		
 	}
-	.content-box.tertiary{
-		background-color: #fff;
-		height: 290px;
-		padding-bottom: 0px !important;
-	}
+
 }

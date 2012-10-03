@@ -95,6 +95,89 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_n
 	right: 4px;
 }
 
+/*** Catalog ***/
+.mw_catalog{
+	.col-24 {
+		width: 956px;
+	}
+	#content .content-box .col-18 {
+		width: 100%;
+	}
+	#content .content-box .col-06 .parametricNav {
+		width: 960px;
+	}
+}
+
+.mw_product{
+	#content .col-24 {
+		width: 956px;
+
+
+	}
+	#content .col-11{
+		width: 436px;
+	}
+	#content .content-box.tertiary{
+		width: 972px;
+	}
+	#content .content-box.tertiary #pdpContainer > .col-13 .displayView .embedFix {
+		height: 400px;
+	}
+	#content .content-box.tertiary #pdpContainer > .col-13 .displayView {
+		width: 442px;	
+	}
+	#content .content-box.tertiary #pdpContainer > .col-13 {
+		width: 516px;
+	}
+	#content .content-box.tertiary #pdpContainer > .col-11 {
+		width: 436px;
+	}
+	#content .embedFix {
+		#displayContainer{
+			img{
+				max-width: 400px !important;
+				max-height: 400px !important;
+			}
+		}
+	}
+	#content{
+		.content-box.tertiary #pdpContainer > .col-11 .productConfiguration #AMVY .productColors {
+			margin-left: 0px;
+			margin-top: 10px;
+			width: 370px;
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 0px;
+		}
+		.productConfiguration {
+			background-color: white;
+			border: 0px none #fff;
+			float: left;
+			margin-bottom: 5px;
+			width: 430px;
+		}
+		#pdpV3tabs{
+			.pdpV3tabContent .col-11{
+				width: 436px;
+			}				
+			.pdpV3tabContent  .col-10{
+				width: 396px;
+			}
+			.detailsMerchandiser{
+				margin-top: 0px;
+				margin-left: 0px;	
+				.heading{
+					text-indent: 23px;
+				}			
+			}
+			.jcarousel-container{
+				margin-left: 0px;
+			}
+		} 
+		
+	}
+}
+
 /*** Footer ***/
 #footer hr{
 	width: 960px;

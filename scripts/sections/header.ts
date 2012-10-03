@@ -1,4 +1,13 @@
 $('./body') {
+
+	$("./div[@id='content']") {
+		$("./div[@id='content-inner']") {
+			$("./div[@id='breadcrumbs']/div/div/div/div[2]/a/img") {
+				attribute("src", asset("images/chatAvailable.png"))
+			}
+		}
+	}
+
 	$("./div[@id='nav']") {
 		attribute("data-ur-set", "tabs")
 		attribute("data-ur-closeable", "true")

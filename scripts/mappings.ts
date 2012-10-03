@@ -30,6 +30,9 @@ match($status) {
 			with(/shop-mens/) {
 				@import pages/shopmens.ts
 			}
+			with(/mens-apex-bionic-jacket/) {
+				@import pages/product.ts
+			}
 			with(/catalog/) {
 				@import pages/catalog.ts
 			}
