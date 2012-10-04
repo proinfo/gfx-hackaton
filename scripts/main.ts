@@ -1,7 +1,19 @@
 # The main file executed by Tritium. The start of all other files.
 
 match($content_type) {
+	
+	with(/text\/plain/) {
+		log("////////////////////////////////// PLAIN")
+		match($path) {
+			with(/TNFSearchResultJSON/) {
+				log("////////////////////////////////// JSON")
+				replace("www.thenorthface.com","mlocal.thenorthface.com")
+			}
+		}
+	}
+	
   with(/html/) {
+		log("////////////////////////////////// HTML")
     replace(/fb:/, "fbn_") # Rewrite the xmlns facebook nodes before the html parser clobbers them
     
     html("UTF-8") {
@@ -11,10 +23,14 @@ match($content_type) {
 
     replace(/fbn_/, "fb:") # Rewrite the xmlns facebook nodes to restore them
   }
+
   # with(/javascript/) {
   #   @import ajax.ts
   # }
   else() {
     log(concat("Passing through ", $content_type, " unmodified"))
   }
+
+
+	
 }
