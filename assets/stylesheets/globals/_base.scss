@@ -10,6 +10,22 @@ input{
 	   -moz-border-radius: 0px;
 	        border-radius: 0px;
 }
+#cboxClose {
+	color: white;
+	font-size: 11px;
+	padding-right: 12px;
+	margin-right: 0px;
+	position: absolute;
+	top: 9px;
+	right: 0;
+	text-indent: -9999px;
+	text-align: left;
+	text-transform: capitalize;
+	@include sprites-close;
+	&:hover{
+		@include sprites-close-press;
+	}
+}
 #content{
 	background-size: 800px !important;
 	background-position: center 10px !important;
@@ -43,3 +59,4 @@ input{
 .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24 {
 	width: 100%;
 }
+

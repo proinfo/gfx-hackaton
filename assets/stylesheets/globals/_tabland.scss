@@ -49,7 +49,7 @@
 /*** Navigation menu ***/
 body #nav .mw_nav-menu-wrapper .mw_nav-menu{
 	width: 986px;
-	height: 950px;
+	height: 975px;
 }
 body #nav .mw_nav-menu-wrapper .mw_nav-menu .db{
 	height: 222px;
@@ -112,8 +112,9 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_n
 .mw_product{
 	#content .col-24 {
 		width: 956px;
-
-
+	}
+	> img{
+		display: none !important;
 	}
 	#content .col-11{
 		width: 436px;
@@ -122,10 +123,10 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_n
 		width: 972px;
 	}
 	#content .content-box.tertiary #pdpContainer > .col-13 .displayView .embedFix {
-		height: 400px;
+		height: 550px;
 	}
 	#content .content-box.tertiary #pdpContainer > .col-13 .displayView {
-		width: 442px;	
+		width: 516px;	
 	}
 	#content .content-box.tertiary #pdpContainer > .col-13 {
 		width: 516px;
@@ -136,8 +137,9 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_n
 	#content .embedFix {
 		#displayContainer{
 			img{
-				max-width: 400px !important;
-				max-height: 400px !important;
+				max-width: 550px !important;
+				max-height: 550px !important;
+				overflow: hidden;
 			}
 		}
 	}
@@ -150,6 +152,16 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_n
 			margin-right: 10px;
 			margin-bottom: 0px;
 		}
+		.content-box.tertiary #pdpContainer > .col-11 .productConfiguration #AMVY{
+			width: 380px;
+			display: block;
+			float: right;
+			margin-top: 40px;
+		 	li {
+				margin-top: 30px !important;
+			}
+		}
+	
 		.productConfiguration {
 			background-color: white;
 			border: 0px none #fff;
@@ -157,24 +169,24 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_n
 			margin-bottom: 5px;
 			width: 430px;
 		}
-		#pdpV3tabs{
-			.pdpV3tabContent .col-11{
-				width: 436px;
-			}				
-			.pdpV3tabContent  .col-10{
-				width: 396px;
-			}
-			.detailsMerchandiser{
-				margin-top: 0px;
-				margin-left: 0px;	
-				.heading{
-					text-indent: 23px;
-				}			
-			}
-			.jcarousel-container{
-				margin-left: 0px;
-			}
-		} 
+
+		.pdpV3tabContent .col-11{
+			width: 436px;
+		}				
+		.pdpV3tabContent  .col-10{
+			width: 396px;
+		}
+		.detailsMerchandiser{
+			margin-top: 0px;
+			margin-left: 0px;	
+			.heading{
+				text-indent: 23px;
+			}			
+		}
+		.jcarousel-container{
+			margin-left: 0px;
+		}
+		
 		
 	}
 }

@@ -3,17 +3,14 @@
 match($content_type) {
 	
 	with(/text\/plain/) {
-		log("////////////////////////////////// PLAIN")
 		match($path) {
 			with(/TNFSearchResultJSON/) {
-				log("////////////////////////////////// JSON")
 				replace("www.thenorthface.com","mlocal.thenorthface.com")
 			}
 		}
 	}
 	
   with(/html/) {
-		log("////////////////////////////////// HTML")
     replace(/fb:/, "fbn_") # Rewrite the xmlns facebook nodes before the html parser clobbers them
     
     html("UTF-8") {

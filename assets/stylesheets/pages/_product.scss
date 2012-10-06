@@ -121,7 +121,7 @@
 						.title{
 							vertical-align: middle;
 							font-weight: bold;
-							margin: 15px 0 0 0px;
+							margin: 15px 0 5px 0px;
 						}
 					
 						.productStyle {
@@ -137,7 +137,7 @@
 							float: left;
 							margin-right: 60px;
 							margin-bottom: 50px;
-							margin-left: 10px;
+							margin-left: 20px;
 							.title{
 								display: block;
 								clear: both;
@@ -197,6 +197,8 @@
 		}		
 	}
 	ul.mw_bottom{
+		width: 455px;
+		margin: auto;
 		li {
 		padding: 0;
 		width: 100%;
@@ -213,7 +215,7 @@
 				> li{
 					padding-right: 10px;
 					display: inline-block;
-					float: left;
+					vertical-align: middle;
 					margin: 9px 0;
 					max-width: 85px;
 					max-height: 25px;
@@ -222,24 +224,24 @@
 		}
 	}
 	
-	#pdpV3tabs{
-		.pdpV3tabContent{
-			.col-11, .col-10{
-				width: 653px;
-			}
-			#detailsMerchandiser{
-				margin-top: 30px;	
-				margin-left: 42px;			
-				.heading{
-					text-indent: 0px;
-				}			
-			}
-			.jcarousel-container{
+
+	.pdpV3tabContent{
+		.col-11, .col-10{
+			width: 653px;
+		}
+		#detailsMerchandiser{
+			margin-top: 30px;				
+			.heading{
+				text-indent: 0px;
 				margin-left: 42px;
-				margin-left: 132px;	
-			}
+			}			
+		}
+		.jcarousel-container{
+			margin-left: 42px;
+			margin-left: 132px;	
 		}
 	}
+
 	
 	#lupaVdisplayImage{
 		left: 730px !important;

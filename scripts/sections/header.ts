@@ -137,12 +137,66 @@ $('./body') {
 							}
 						}
 						insert("div", class: "back side"){
-							insert("div", class: "wrapper"){
-								insert("a", class: "goback"){
-									attribute("onclick", "changeClass('nav-womens')")
-									inner("See details")
+								insert("div", class: "wrapper"){
+									insert("div", class: "wrapper"){
+										insert("div", class: "mw_col1"){
+											insert("a", class: "mw_title"){
+												insert("span", class: "white"){
+													inner("SHOP BY")
+												}
+												insert("span", class: "dark"){
+													inner("WOMENS'")
+												}
+											}
+
+											insert("a", class: "mw_tile-button"){
+												inner("NEW ARRIVALS")
+											}
+											insert("a", class: "mw_tile-button"){
+												inner("BEST SELLERS")
+											}
+											insert("a", class: "mw_tile-button"){
+												inner("ATHLETE PICKS")
+											}
+											insert("a", class: "mw_tile-button"){
+												inner("GIFT CARDS")
+											}
+
+										}
+										insert("div", class: "mw_col2"){
+											insert("a"){
+												attribute("href", "http://mlocal.thenorthface.com/catalog/sc-gear/men-s-jackets-vests.html")
+												inner("JACKETS & VESTS")
+											}
+											insert("a"){
+												inner("SHIRTS & SWEATERS")
+											}
+											insert("a"){
+												inner("PANTS & SHORTS")
+											}
+											insert("a"){
+												inner("FOOTWARE")
+											}
+											insert("a"){
+												inner("ACCESSORIES")
+											}
+										}
+										insert("div", class: "mw_col3"){
+											insert("a"){
+												inner("ACTIVITY")
+											}
+											insert("a"){
+												inner("COLLECTIONS")
+											}
+										}
+
+									}
+									insert("a", class: "goback"){
+										attribute("onclick", "changeClass('nav-womens')")
+										inner("See details")
+									}
 								}
-							}
+							
 						}
 					}
 				}

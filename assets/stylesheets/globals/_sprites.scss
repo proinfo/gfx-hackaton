@@ -1,7 +1,7 @@
 $sprites-url: url("http://localhost:3003/images/sprites.png");
 
 $sprites-width: 52px;
-$sprites-height: 327px;
+$sprites-height: 389px;
 
 $sprites-cart-x: 0px;
 $sprites-cart-y: 0px;
@@ -13,33 +13,43 @@ $sprites-checkout-y: -33px;
 $sprites-checkout-width: 44px;
 $sprites-checkout-height: 33px;
 
+$sprites-close-press-x: 0px;
+$sprites-close-press-y: -66px;
+$sprites-close-press-width: 51px;
+$sprites-close-press-height: 31px;
+
+$sprites-close-x: 0px;
+$sprites-close-y: -97px;
+$sprites-close-width: 51px;
+$sprites-close-height: 31px;
+
 $sprites-menu-off-x: 0px;
-$sprites-menu-off-y: -66px;
+$sprites-menu-off-y: -128px;
 $sprites-menu-off-width: 52px;
 $sprites-menu-off-height: 47px;
 
 $sprites-menu-on-x: 0px;
-$sprites-menu-on-y: -113px;
+$sprites-menu-on-y: -175px;
 $sprites-menu-on-width: 52px;
 $sprites-menu-on-height: 47px;
 
 $sprites-nav-back-x: 0px;
-$sprites-nav-back-y: -160px;
+$sprites-nav-back-y: -222px;
 $sprites-nav-back-width: 40px;
 $sprites-nav-back-height: 40px;
 
 $sprites-search-off-x: 0px;
-$sprites-search-off-y: -200px;
+$sprites-search-off-y: -262px;
 $sprites-search-off-width: 51px;
 $sprites-search-off-height: 47px;
 
 $sprites-search-on-x: 0px;
-$sprites-search-on-y: -247px;
+$sprites-search-on-y: -309px;
 $sprites-search-on-width: 51px;
 $sprites-search-on-height: 47px;
 
 $sprites-user-x: 0px;
-$sprites-user-y: -294px;
+$sprites-user-y: -356px;
 $sprites-user-width: 44px;
 $sprites-user-height: 33px;
 
@@ -55,38 +65,50 @@ $sprites-user-height: 33px;
   height: 33px;
 }
 
-@mixin sprites-menu-off() {
+@mixin sprites-close-press() {
   background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -66px;
+  width: 51px;
+  height: 31px;
+}
+
+@mixin sprites-close() {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -97px;
+  width: 51px;
+  height: 31px;
+}
+
+@mixin sprites-menu-off() {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -128px;
   width: 52px;
   height: 47px;
 }
 
 @mixin sprites-menu-on() {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -113px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -175px;
   width: 52px;
   height: 47px;
 }
 
 @mixin sprites-nav-back() {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -160px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -222px;
   width: 40px;
   height: 40px;
 }
 
 @mixin sprites-search-off() {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -200px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -262px;
   width: 51px;
   height: 47px;
 }
 
 @mixin sprites-search-on() {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -247px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -309px;
   width: 51px;
   height: 47px;
 }
 
 @mixin sprites-user() {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -294px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -356px;
   width: 44px;
   height: 33px;
 }
@@ -103,38 +125,50 @@ $sprites-user-height: 33px;
   height: 33px;
 }
 
-.sprites-menu-off {
+.sprites-close-press {
   background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -66px;
+  width: 51px;
+  height: 31px;
+}
+
+.sprites-close {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -97px;
+  width: 51px;
+  height: 31px;
+}
+
+.sprites-menu-off {
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -128px;
   width: 52px;
   height: 47px;
 }
 
 .sprites-menu-on {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -113px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -175px;
   width: 52px;
   height: 47px;
 }
 
 .sprites-nav-back {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -160px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -222px;
   width: 40px;
   height: 40px;
 }
 
 .sprites-search-off {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -200px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -262px;
   width: 51px;
   height: 47px;
 }
 
 .sprites-search-on {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -247px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -309px;
   width: 51px;
   height: 47px;
 }
 
 .sprites-user {
-  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -294px;
+  background: url("http://localhost:3003/images/sprites.png") no-repeat 0px -356px;
   width: 44px;
   height: 33px;
 }

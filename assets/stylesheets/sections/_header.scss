@@ -105,8 +105,8 @@ body{
 			background: image-url("trans90.png") repeat 0 0;
 			min-height: 2000px;
 			.mw_nav-menu{
-				padding: 25px 0 15px;				
-				height: 725px;
+				padding: 0px 0 0px;				
+				height: 760px;
 				width: 742px;
 				margin: auto;
 				border: 1px solid #4c4c4c;
@@ -127,9 +127,10 @@ body{
 				#container{
 					height: auto;
 					width: 100%;
+					overflow: hidden;
 					position: relative;
 					text-align: center;
-
+					padding: 25px 0 15px 0;
 					-webkit-perspective: 4200;
 				}
 				.db{
