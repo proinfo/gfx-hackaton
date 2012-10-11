@@ -1,41 +1,5 @@
 body{
-	
-//	.front {
-//		background-color: red !important;
-//		display: block;
-//		width: 320px;
-//		height: 320px;
-//	}
-//	.back {
-//		background-color: blue !important;
-//		display: block;
-//		width: 320px;
-//		height: 320px;
-//	}
-//	.left {
-//		background-color: yellow !important;
-//		display: block;
-//		width: 320px;
-//		height: 320px;
-//	}
-//	.right {
-//		background-color: orange !important;
-//		display: block;
-//		width: 320px;
-//		height: 320px;
-//	}
-//	.top {
-//		background-color: green !important;
-//		display: block;
-//		width: 320px;
-//		height: 320px;
-//	}
-//	.bottom {
-//		background-color: #ccc !important;
-//		display: block;
-//		width: 320px;
-//		height: 320px;
-//	}
+
 
 	#gfxOverlay{
 		z-index: 100;
@@ -67,6 +31,9 @@ body{
 				color: #fff;
 				text-transform: uppercase;
 				font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
+			}
+			input[type=text]{
+				width: 300px;
 			}			
 			input[type=submit]{
 				background-color: #000;
