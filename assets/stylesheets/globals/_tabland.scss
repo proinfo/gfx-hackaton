@@ -68,7 +68,7 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .back{
 	height: 222px;
 	width: 466px;
 }
-body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col1{
+body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_nav{
 	display: inline-block;
 	float: left;
 }
@@ -76,15 +76,18 @@ body #nav .mw_nav-menu-wrapper .mw_nav-menu .goback {
 	top: 160px;
 	right: 25px;
 }
-body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 {
-	width: 33%;
+body .mw_col1 {
+	display: block !important;
 }
-body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2, body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col3 {
-	padding-top: 40px;
-	padding-left: 0px;
+body .mw_col2 {
+	width: 33% !important;
 }
-body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col2 a, body #nav .mw_nav-menu-wrapper .mw_nav-menu .wrapper .mw_col3 a{
-	line-height: 200%;
+body .mw_col2, body .mw_col3 {
+	padding-top: 40px !important;
+	padding-left: 0px !important;
+}
+body .mw_col2 a, body .mw_col3 a{
+	line-height: 200% !important;
 }
 
 /*** Shop men ***/

@@ -1,5 +1,6 @@
 $('./body') {
 
+
 	$("./div[@id='content']") {
 		$("./div[@id='content-inner']") {
 			$("./div[@id='breadcrumbs']/div/div/div/div[2]/a/img") {
@@ -16,8 +17,9 @@ $('./body') {
 			
 			insert_bottom("div", class: "mw_header-box"){
 			
-				move_here("../../../div[@id='toolbar']/div/div/ul/li[1]/a", "bottom")
-
+				insert_top("a", id: "WC_LogonLogoffLink"){						
+				}
+				
 				move_here("../../../div[@id='toolbar']/div/div/div[@class='pellet cool']", "bottom"){
 					attribute("class", "mw_cart")
 				}
@@ -57,70 +59,47 @@ $('./body') {
 				/*** Mens ***/
 				insert("div", class: "db"){
 					insert("div", id: "nav-mens"){
+						gfx_flip("mens")
 						attribute("class", "block")
 						insert("div", class: "front side"){
-							attribute("onclick", "changeClass('nav-mens')")
-							insert("div", class: "wrapper"){
-							}
+							gfx_flip_button("mens")
 						}
 						insert("div", class: "back side"){
 							insert("div", class: "wrapper"){
-								insert("div", class: "wrapper"){
-									insert("div", class: "mw_col1"){
-										insert("a", class: "mw_title"){
-											insert("span", class: "white"){
-												inner("SHOP BY")
-											}
-											insert("span", class: "dark"){
-												inner("MENS'")
-											}
+								insert("div", class: "mw_col1"){
+									insert("div", class: "mw_title"){
+										insert("span", class: "white"){
+											inner("BUY")
 										}
-										
-										insert("a", class: "mw_tile-button"){
-											inner("NEW ARRIVALS")
-										}
-										insert("a", class: "mw_tile-button"){
-											inner("BEST SELLERS")
-										}
-										insert("a", class: "mw_tile-button"){
-											inner("ATHLETE PICKS")
-										}
-										insert("a", class: "mw_tile-button"){
-											inner("GIFT CARDS")
-										}
-										
-									}
-									insert("div", class: "mw_col2"){
-										insert("a"){
-											attribute("href", "http://mlocal.thenorthface.com/catalog/sc-gear/men-s-jackets-vests.html")
-											inner("JACKETS & VESTS")
-										}
-										insert("a"){
-											inner("SHIRTS & SWEATERS")
-										}
-										insert("a"){
-											inner("PANTS & SHORTS")
-										}
-										insert("a"){
-											inner("FOOTWARE")
-										}
-										insert("a"){
-											inner("ACCESSORIES")
+										insert("span", class: "dark"){
+											inner("MEN")
 										}
 									}
-									insert("div", class: "mw_col3"){
-										insert("a"){
-											inner("ACTIVITY")
-										}
-										insert("a"){
-											inner("COLLECTIONS")
-										}
+									insert("a", class: "mw_tile-button"){
+										inner("New arivals")
 									}
-									
+									insert("a", class: "mw_tile-button"){
+										inner("Best sellers")
+									}
+									insert("a", class: "mw_tile-button"){
+										inner("Gift Cards")
+									}									
 								}
-								insert("a", class: "goback"){
-									attribute("onclick", "changeClass('nav-mens')")
-									inner("See details")
+								insert("div", class: "mw_col2"){
+									insert("a", href: "http://mlocal.thenorthface.com/catalog/sc-gear/men-s-jackets-vests.html"){
+										inner("JACKETS & VESTS")										
+									}
+									insert("a", "SHIRTS & SWEATERS")
+									insert("a", "PANTS & SHORTS")
+									insert("a", "FOOTWEAR")
+									insert("a", "ACCESSORIES")
+								}
+								insert("div", class: "mw_col3"){
+									insert("a", "ACTIVITY")
+									insert("a", "COLLECTIONS")
+									insert("a", class: "goback"){
+										gfx_flip_button("mens")
+									}
 								}
 							}
 						}
@@ -129,195 +108,226 @@ $('./body') {
 				
 				/*** Womens ***/
 				insert("div", class: "db"){
-					insert("div", id: "nav-womens"){
+					insert("div", id: "nav-womens"){	
+					
 						attribute("class", "block")
 						insert("div", class: "front side"){
-							attribute("onclick", "changeClass('nav-womens')")
-							insert("div", class: "wrapper"){
-							}
+							gfx_overlay_button("women")
 						}
 						insert("div", class: "back side"){
+							gfx_overlay_content("women")
 								insert("div", class: "wrapper"){
-									insert("div", class: "wrapper"){
-										insert("div", class: "mw_col1"){
-											insert("a", class: "mw_title"){
-												insert("span", class: "white"){
-													inner("SHOP BY")
-												}
-												insert("span", class: "dark"){
-													inner("WOMENS'")
-												}
+									insert("div", class: "mw_col1"){
+										insert("div", class: "mw_title"){
+											insert("span", class: "white"){
+												inner("BUY")
 											}
-
-											insert("a", class: "mw_tile-button"){
-												inner("NEW ARRIVALS")
-											}
-											insert("a", class: "mw_tile-button"){
-												inner("BEST SELLERS")
-											}
-											insert("a", class: "mw_tile-button"){
-												inner("ATHLETE PICKS")
-											}
-											insert("a", class: "mw_tile-button"){
-												inner("GIFT CARDS")
-											}
-
-										}
-										insert("div", class: "mw_col2"){
-											insert("a"){
-												attribute("href", "http://mlocal.thenorthface.com/catalog/sc-gear/men-s-jackets-vests.html")
-												inner("JACKETS & VESTS")
-											}
-											insert("a"){
-												inner("SHIRTS & SWEATERS")
-											}
-											insert("a"){
-												inner("PANTS & SHORTS")
-											}
-											insert("a"){
-												inner("FOOTWARE")
-											}
-											insert("a"){
-												inner("ACCESSORIES")
+											insert("span", class: "dark"){
+												inner("WOMEN")
 											}
 										}
-										insert("div", class: "mw_col3"){
-											insert("a"){
-												inner("ACTIVITY")
-											}
-											insert("a"){
-												inner("COLLECTIONS")
-											}
+										insert("a", class: "mw_tile-button"){
+											inner("New arivals")
 										}
-
+										insert("a", class: "mw_tile-button"){
+											inner("Best sellers")
+										}
+										insert("a", class: "mw_tile-button"){
+											inner("Gift Cards")
+										}									
 									}
-									insert("a", class: "goback"){
-										attribute("onclick", "changeClass('nav-womens')")
-										inner("See details")
+									insert("div", class: "mw_col2"){
+										insert("a", href: "http://mlocal.thenorthface.com/catalog/sc-gear/men-s-jackets-vests.html"){
+											inner("JACKETS & VESTS")										
+										}
+										insert("a", "SHIRTS & SWEATERS")
+										insert("a", "PANTS & SHORTS")
+										insert("a", "FOOTWEAR")
+										insert("a", "ACCESSORIES")
+									}
+									insert("div", class: "mw_col3"){
+										insert("a", "ACTIVITY")
+										insert("a", "COLLECTIONS")
 									}
 								}
-							
 						}
 					}
 				}
 				
 				/*** Kids ***/
 				insert("div", class: "db"){
-					insert("div", id: "nav-kids"){
-						attribute("class", "block")
-						insert("div", class: "front side"){
-							attribute("onclick", "changeClass('nav-kids')")
-							insert("div", class: "wrapper"){
+					gfx_cube("mw_cube")
+					attribute("id", "nav-kids")
+
+					insert("div"){
+						attribute("class", "front")		
+						add_class("side")	
+						gfx_cube_button("mw_cube", "right")					
+					}
+					
+					insert("div"){
+						attribute("class", "right")
+						add_class("side")				
+						
+						insert("div", class: "wrapper"){
+							insert("div", class: "mw_col1"){
+								insert("div", class: "mw_title"){
+									insert("span", class: "white"){
+										inner("BUY")
+									}
+									insert("span", class: "dark"){
+										inner("KIDS")
+									}
+								}
+								insert("a", class: "mw_tile-button"){
+									inner("New arivals")
+								}
+								insert("a", class: "mw_tile-button"){
+									inner("Best sellers")
+								}
+								insert("a", class: "mw_tile-button"){
+									inner("Gift Cards")
+								}									
 							}
-						}
-						insert("div", class: "back side"){
-							insert("div", class: "wrapper"){
+							insert("div", class: "mw_col2"){
+								insert("a", href: "http://mlocal.thenorthface.com/catalog/sc-gear/men-s-jackets-vests.html"){
+									inner("JACKETS & VESTS")										
+								}
+								insert("a", "SHIRTS & SWEATERS")
+								insert("a", "PANTS & SHORTS")
+								insert("a", "FOOTWEAR")
+								insert("a", "ACCESSORIES")
+							}
+							insert("div", class: "mw_col3"){
+								insert("a", "ACTIVITY")
+								insert("a", "COLLECTIONS")
 								insert("a", class: "goback"){
-									attribute("onclick", "changeClass('nav-kids')")
-									inner("See details")
+									gfx_cube_button("mw_cube", "left")	
+									inner("GO BACK")
 								}
 							}
 						}
+																
 					}
+					insert("div", class: "left"){
+						add_class("side")
+						
+						insert_top("p", "Search 'Kids'")
+						insert("form"){
+							insert("input", type: "text")
+							insert("input", type: "submit"){
+								attribute("value", "Search")
+							}
+						}
+						insert("a", class: "goback"){
+							gfx_cube_button("mw_cube", "front")	
+							inner("GO BACK")
+						}
+					}					
+					
 				}
+
+			
+				
+				
 								
-				/*** Equipment ***/
-				insert("div", class: "db"){
-					insert("div", id: "nav-equipment"){
-						attribute("class", "block")
-						insert("div", class: "front side"){
-							attribute("onclick", "changeClass('nav-equipment')")
-							insert("div", class: "wrapper"){
-							}
-						}
-						insert("div", class: "back side"){
-							insert("div", class: "wrapper"){
-								insert("a", class: "goback"){
-									attribute("onclick", "changeClass('nav-equipment')")
-									inner("See details")
-								}
-							}
-						}
-					}
-				}
-				
-				/*** ShopBy ***/
-				insert("div", class: "db"){
-					insert("div", id: "nav-shopby"){
-						attribute("class", "block")
-						insert("div", class: "front side"){
-							attribute("onclick", "changeClass('nav-shopby')")
-							insert("div", class: "wrapper"){
-							}
-						}
-						insert("div", class: "back side"){
-							insert("div", class: "wrapper"){
-								insert("a", class: "goback"){
-									attribute("onclick", "changeClass('nav-shopby')")
-									inner("See details")
-								}
-							}
-						}
-					}
-				}
-				
-				/*** Exploration ***/
-				insert("div", class: "db"){
-					insert("div", id: "nav-exploration"){
-						attribute("class", "block")
-						insert("div", class: "front side"){
-							attribute("onclick", "changeClass('nav-exploration')")
-							insert("div", class: "wrapper"){
-							}
-						}
-						insert("div", class: "back side"){
-							insert("div", class: "wrapper"){
-								insert("a", class: "goback"){
-									attribute("onclick", "changeClass('nav-exploration')")
-									inner("See details")
-								}
-							}
-						}
-					}
-				}
-				
-				/*** Innovation ***/
-				insert("div", class: "db"){
-					insert("div", id: "nav-innovation"){
-						attribute("class", "block")
-						insert("div", class: "front side"){
-							attribute("onclick", "changeClass('nav-innovation')")
-							insert("div", class: "wrapper"){
-							}
-						}
-						insert("div", class: "back side"){
-							insert("div", class: "wrapper"){
-								insert("a", class: "goback"){
-									attribute("onclick", "changeClass('nav-innovation')")
-									inner("See details")
-								}
-							}
-						}
-					}
-				}
-				
-				/*** Getoutdoors ***/
-				insert("div", class: "db"){
-					insert("div", id: "nav-getoutdoors"){
-						attribute("class", "block")
-						insert("div", class: "front side"){
-							attribute("onclick", "changeClass('nav-getoutdoors')")
-							insert("div", class: "wrapper"){
-							}
-						}
-						insert("div", class: "back side"){						
-							insert("a", class: "goback"){
-								attribute("onclick", "changeClass('nav-getoutdoors')")
-								inner("Back")
-							}
-						}						
-					}
-				}							
+				# /*** Equipment ***/
+				# 			insert("div", class: "db"){
+				# 				insert("div", id: "nav-equipment"){
+				# 					attribute("class", "block")
+				# 					insert("div", class: "front side"){
+				# 						attribute("onclick", "changeClass('nav-equipment')")
+				# 						insert("div", class: "wrapper"){
+				# 						}
+				# 					}
+				# 					insert("div", class: "back side"){
+				# 						insert("div", class: "wrapper"){
+				# 							insert("a", class: "goback"){
+				# 								attribute("onclick", "changeClass('nav-equipment')")
+				# 								inner("See details")
+				# 							}
+				# 						}
+				# 					}
+				# 				}
+				# 			}
+				# 			
+				# 			/*** ShopBy ***/
+				# 			insert("div", class: "db"){
+				# 				insert("div", id: "nav-shopby"){
+				# 					attribute("class", "block")
+				# 					insert("div", class: "front side"){
+				# 						attribute("onclick", "changeClass('nav-shopby')")
+				# 						insert("div", class: "wrapper"){
+				# 						}
+				# 					}
+				# 					insert("div", class: "back side"){
+				# 						insert("div", class: "wrapper"){
+				# 							insert("a", class: "goback"){
+				# 								attribute("onclick", "changeClass('nav-shopby')")
+				# 								inner("See details")
+				# 							}
+				# 						}
+				# 					}
+				# 				}
+				# 			}
+				# 			
+				# 			/*** Exploration ***/
+				# 			insert("div", class: "db"){
+				# 				insert("div", id: "nav-exploration"){
+				# 					attribute("class", "block")
+				# 					insert("div", class: "front side"){
+				# 						attribute("onclick", "changeClass('nav-exploration')")
+				# 						insert("div", class: "wrapper"){
+				# 						}
+				# 					}
+				# 					insert("div", class: "back side"){
+				# 						insert("div", class: "wrapper"){
+				# 							insert("a", class: "goback"){
+				# 								attribute("onclick", "changeClass('nav-exploration')")
+				# 								inner("See details")
+				# 							}
+				# 						}
+				# 					}
+				# 				}
+				# 			}
+				# 			
+				# 			/*** Innovation ***/
+				# 			insert("div", class: "db"){
+				# 				insert("div", id: "nav-innovation"){
+				# 					attribute("class", "block")
+				# 					insert("div", class: "front side"){
+				# 						attribute("onclick", "changeClass('nav-innovation')")
+				# 						insert("div", class: "wrapper"){
+				# 						}
+				# 					}
+				# 					insert("div", class: "back side"){
+				# 						insert("div", class: "wrapper"){
+				# 							insert("a", class: "goback"){
+				# 								attribute("onclick", "changeClass('nav-innovation')")
+				# 								inner("See details")
+				# 							}
+				# 						}
+				# 					}
+				# 				}
+				# 			}
+				# 			
+				# 			/*** Getoutdoors ***/
+				# 			insert("div", class: "db"){
+				# 				insert("div", id: "nav-getoutdoors"){
+				# 					attribute("class", "block")
+				# 					insert("div", class: "front side"){
+				# 						attribute("onclick", "changeClass('nav-getoutdoors')")
+				# 						insert("div", class: "wrapper"){
+				# 						}
+				# 					}
+				# 					insert("div", class: "back side"){						
+				# 						insert("a", class: "goback"){
+				# 							attribute("onclick", "changeClass('nav-getoutdoors')")
+				# 							inner("Back")
+				# 						}
+				# 					}						
+				# 				}
+				# 			}							
 				
 			}
 		}

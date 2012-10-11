@@ -1,4 +1,165 @@
 body{
+	
+//	.front {
+//		background-color: red !important;
+//		display: block;
+//		width: 320px;
+//		height: 320px;
+//	}
+//	.back {
+//		background-color: blue !important;
+//		display: block;
+//		width: 320px;
+//		height: 320px;
+//	}
+//	.left {
+//		background-color: yellow !important;
+//		display: block;
+//		width: 320px;
+//		height: 320px;
+//	}
+//	.right {
+//		background-color: orange !important;
+//		display: block;
+//		width: 320px;
+//		height: 320px;
+//	}
+//	.top {
+//		background-color: green !important;
+//		display: block;
+//		width: 320px;
+//		height: 320px;
+//	}
+//	.bottom {
+//		background-color: #ccc !important;
+//		display: block;
+//		width: 320px;
+//		height: 320px;
+//	}
+
+	#gfxOverlay{
+		z-index: 100;
+		#gfxOverlayPanel {
+			margin: 10% auto;
+			width: 466px;
+			.back.side{
+				z-index: 10;
+				background: image-url("nav-off.png") no-repeat 0 0;
+				height: 222px;
+				width: 466px;
+				margin: auto;
+			}
+		}
+	}
+	
+	
+	#nav-kids{
+		.side{
+			background: image-url("nav-off.png") no-repeat 0 0 !important;
+		}
+		.front.side{
+			background: image-url("nav-kids.jpg") no-repeat 0 0 !important;
+		}
+		.left.side{
+			padding-top: 60px;
+			p{
+				font-size: 18px;
+				color: #fff;
+				text-transform: uppercase;
+				font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
+			}			
+			input[type=submit]{
+				background-color: #000;
+				border: 1px solid #000;
+				color: #ccc;
+				height: 25px;
+				font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
+			}
+		}		
+	}
+
+	.wrapper{
+		position:relative;
+		-webkit-backface-visibility: hidden;
+		
+		.mw_col1, .mw_col2, .mw_col3{
+			width: 33%;
+			float: left;
+			text-align: left;
+		}
+		.mw_col1{
+			display: none;
+			.mw_title{
+				font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
+				font-weight: bold;
+				font-stretch: condensed;
+				line-height: 19px;
+				margin: 17px 20px;
+				display: block;
+				text-align: left;
+				.white{
+					color: #fff;
+					font-size: 14px;
+					display: block;
+				}
+				.dark{
+					color: #0d0d0d;
+					display: block;
+					font-size: 26px;
+				}
+			}
+			.mw_tile-button{
+				background-color: #4f4f4f;
+				display: block;
+				padding: 9px 10px 8px;
+				width: 94px;
+				text-align: left;
+				color: #fff;
+				text-transform: uppercase;
+				font-size: 10px;
+				margin: 2px 0px 0px 20px;
+			}
+		}
+		.mw_col2, .mw_col3{
+			padding-top: 20px;
+			padding-left: 10px;
+			a{
+				display: block;
+				font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
+				font-weight: bold;
+				font-stretch: condensed;
+				font-size: 16px;
+				text-shadow: 0px 0px 1px #484848;
+				color: #fff;
+				line-height: 160%;
+				margin-left: 15px;
+			}						
+		}
+		.mw_col2{
+			width: 50%;
+		}
+		.mw_col3{
+			a{
+				margin-left: 25px;
+			}
+		}
+		
+	}
+	.goback{
+		position: absolute;
+		top: 110px;
+		right: 25px;
+		text-indent: -9999px;
+		@include sprites-nav-back();
+	}
+	.goback:hover{
+		cursor: pointer;
+	}
+	.back .content{
+		padding: 50px 25px;
+	}
+
+
 	#toolbar{
 		display: none;
 	}
@@ -6,6 +167,7 @@ body{
 	#nav{
 		height: 87px;
 		position: relative;
+		z-index: 98;
 		#nav-inner{
 			> a{
 				margin-left: 25px;
@@ -176,11 +338,7 @@ body{
 							background: image-url("nav-womens.jpg") no-repeat 0 0;
 						}
 					}
-					&#nav-kids{
-						.front.side{
-							background: image-url("nav-kids.jpg") no-repeat 0 0;
-						}
-					}				
+									
 					&#nav-equipment{
 						.front.side{
 							background: image-url("nav-equipment.jpg") no-repeat 0 0;
@@ -234,13 +392,10 @@ body{
 
 				.front{
 					color: #fff;
-					background-color: #000;
+				//	background-color: #000;
 					height: 169px;
 					width: 356px;
-
-
 				}
-				.front img{ }
 
 				.back{
 					background-color: #fff;
@@ -250,86 +405,7 @@ body{
 					-webkit-transform: rotateY(180deg);
 				}
 
-				.wrapper{
-					position:relative;
-					-webkit-backface-visibility: hidden;
-					
-					.mw_col1, .mw_col2, .mw_col3{
-						width: 33%;
-						float: left;
-						text-align: left;
-					}
-					.mw_col1{
-						display: none;
-						.mw_title{
-							font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
-							font-weight: bold;
-							font-stretch: condensed;
-							line-height: 19px;
-							margin: 17px 20px;
-							display: block;
-							text-align: left;
-							.white{
-								color: #fff;
-								font-size: 14px;
-								display: block;
-							}
-							.dark{
-								color: #0d0d0d;
-								display: block;
-								font-size: 26px;
-							}
-						}
-						.mw_tile-button{
-							background-color: #4f4f4f;
-							display: block;
-							padding: 9px 10px 8px;
-							width: 94px;
-							text-align: left;
-							color: #fff;
-							text-transform: uppercase;
-							font-size: 10px;
-							margin: 2px 0px 0px 20px;
-						}
-					}
-					.mw_col2, .mw_col3{
-						padding-top: 20px;
-						padding-left: 10px;
-						a{
-							display: block;
-							font-family: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", "Arial-Narrow", "ArialNarrow", Helvetica, Arial, sans-serif;
-							font-weight: bold;
-							font-stretch: condensed;
-							font-size: 16px;
-							text-shadow: 0px 0px 1px #484848;
-							color: #fff;
-							line-height: 160%;
-							margin-left: 15px;
-						}						
-					}
-					.mw_col2{
-						width: 50%;
-					}
-					.mw_col3{
-						a{
-							margin-left: 25px;
-						}
-					}
-					
-				}
-				.goback{
-					position: absolute;
-					top: 110px;
-					right: 25px;
-					text-indent: -9999px;
-					@include sprites-nav-back();
-				}
-				.goback:hover{
-					cursor: pointer;
-				}
-				.back .content{
-					padding: 50px 25px;
-				}
+				
 				
 				
 			}

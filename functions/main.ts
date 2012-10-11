@@ -1,3 +1,103 @@
+## 2012-10-06 nebojsa
+ # HACKATON
+ # REF_URL: url
+ ####################
+
+@func XMLNode.gfx_flip(Text %name){
+	# Set attributes
+	attribute("gfx_type", "gfx_flip")
+	attribute("gfx_flip_item", %name)
+	
+	# Generate and insert script on page
+	$("/html/head") {
+		insert_bottom("script", type: "text/javascript"){
+			attribute("charset", "utf-8")
+				inner("jQuery(function($) {$('[gfx_flip_item=" + %name + "]').gfxFlip();});")
+		}
+	}
+}
+
+@func XMLNode.gfx_flip_button(Text %name){
+
+	# Set attributes
+	attribute("gfx_type", "gfx_flip_button")
+	$("//*[@gfx_type='gfx_flip_button']") {
+		attribute("gfx_flip_button_item", index())
+	}	
+	%selector = fetch("./@gfx_flip_button_item")
+
+	$("/html/head") {
+		insert_bottom("script", type: "text/javascript"){
+			attribute("charset", "utf-8")
+			inner("jQuery(function($) {$('[gfx_flip_button_item=" + %selector + "]').click(function() { return $('[gfx_flip_item=" + %name + "]').trigger('flip');});});")
+		}
+	}
+}
+
+@func XMLNode.gfx_cube(Text %name){
+	
+	# Set attributes
+	attribute("gfx_type", "gfx_cube")
+	attribute("gfx_cube_item", %name)
+	
+	# Generate and insert script on page
+	$("/html/head") {
+		insert_bottom("script", type: "text/javascript"){
+			attribute("charset", "utf-8")
+			inner("
+			jQuery(function($) {
+			var source = 	$('[gfx_cube_item=" + %name + "]');
+			var cube_width = source.css('width').slice(0,-2);
+			var cube_height = source.css('height').slice(0,-2);
+			
+			$('[gfx_cube_item=" + %name + "]').gfxCube({
+				width: cube_width, 
+				height: cube_height
+				});
+			});")
+		}
+	}
+	
+}
+
+@func XMLNode.gfx_cube_button(Text %name, Text %side){
+	# Set attributes
+	attribute("gfx_type", "gfx_cube_button")
+	attribute("gfx_cube_button", %side)
+	attribute("gfx_cube_item", %name)
+	
+	# Generate and insert script on page	
+	$("/html/head") {
+		insert_bottom("script", type: "text/javascript"){
+			attribute("charset", "utf-8")
+			inner("jQuery(function($) {$('[gfx_cube_button=" + %side + "][gfx_cube_item=" + %name + "]').click(function() { return $('[gfx_cube_item=" + %name + "]').trigger('cube', '" + %side + "');});});")
+		}
+	}
+		
+}
+
+@func XMLNode.gfx_overlay_button(Text %name){
+	
+	# Set attributes
+	attribute("gfx_type", "gfx_overlay")
+	attribute("gfx_overlay_button", %name)
+
+	# Generate and insert script on page	
+	$("/html/head") {
+		insert_bottom("script", type: "text/javascript"){
+			attribute("charset", "utf-8")
+			inner("jQuery(function($) {$('[gfx_overlay_button=" + %name + "]').click(function() { return $.gfxOverlay('[gfx_overlay_content=" + %name + "]');});});")
+		}
+	}	
+	
+}
+
+@func XMLNode.gfx_overlay_content(Text %name){
+	# Set attributes
+	attribute("gfx_type", "gfx_overlay")
+	attribute("gfx_overlay_content", %name)
+}
+
 ####################
 ### Site Functions
 ####################

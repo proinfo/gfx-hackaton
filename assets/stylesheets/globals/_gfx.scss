@@ -1,0 +1,17 @@
+/*** Overlay ***/
+[gfx_overlay_content]{
+	display: none;
+}
+#gfxOverlay [gfx_overlay_content]{
+	display: block;
+}
+
+#login-popup{
+	text-align: center;
+	padding: 15px;
+	input{
+		width: 85%;
+		margin: auto;
+		margin-top: 15px;
+	}
+}
